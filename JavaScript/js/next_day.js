@@ -6,11 +6,24 @@
  */
 
 function isLeap(year) {
-    return false;
+
+    if(year % 4==0 && year % 100!==0 || year % 400==0){
+        return true;
+    }
+    else{return false;
+
+    };
+
+
+    
 }
 
 function monthDays(month, year) {
-    return 30;
+    
+   
+        return 30;
+    
+    
 }
 
 function nextDay(day, month, year) {

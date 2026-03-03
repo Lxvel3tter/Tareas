@@ -30,8 +30,11 @@ function main() {
 
 function draw() {
     // Draw a square
-    ctx.fillStyle = "red";
-    ctx.fillRect(canvasWidth / 2, canvasHeight / 2, boxSize, boxSize);
+    
+    //ctx.fillStyle = "red";
+    //ctx.fillRect(canvasWidth / 2, canvasHeight / 2, boxSize, boxSize);
+
+    
 
     // Draw an ellipse
     ctx.beginPath();
@@ -49,6 +52,36 @@ function draw() {
     ctx.fill();
     ctx.stroke();
 
+    
+
+    // Draw a square
+    ctx.fillStyle = "red";
+    ctx.fillRect(500, 200, 200,100);
+
+    // Draw a square
+    ctx.fillStyle = "blue";
+    ctx.fillRect(500, 200, 70,40);
+
+    // Draw a circle
+    ctx.beginPath();
+    ctx.fillStyle = "grey";
+    ctx.strokeStyle = "black";
+    ctx.ellipse(550, 300, 20, 20, 0, 0, Math.PI * 2, false);
+    ctx.fill();
+    ctx.stroke();
+
+    // Draw a circle
+    ctx.beginPath();
+    ctx.fillStyle = "grey";
+    ctx.strokeStyle = "black";
+    ctx.ellipse(650, 300, 20, 20, 0, 0, Math.PI * 2, false);
+    ctx.fill();
+    ctx.stroke();
+
+
+
+
+  
     house();
 
     // TODO: Make different shapes using the canvas 2d functions
