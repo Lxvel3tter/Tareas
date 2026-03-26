@@ -1,0 +1,110 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 10vh 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main";
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+#headerContainer {
+    grid-area: header;
+    background-color: #3333AA;
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+#canvas {
+    grid-area: main;
+    border: 2px solid black;
+    background-color: #87ceeb;
+}
+
+#backButton {
+    margin: 10px;
+}
+
+#examplesContainer {
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.exampleGroup {
+    margin: 0.5em;
+    padding: 1em;
+    max-width: 40vw;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    filter: drop-shadow(gray 5px 5px 3px);
+}
+
+#hud {
+    display: flex;
+    gap: 30px;
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+#overlay.visible {
+    display: flex;
+}
+
+#overlayMessage {
+    font-size: 2rem;
+    color: white;
+    white-space: pre-line;
+    text-align: center;
+}
+
+#overlayButton {
+    font-size: 1rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: #3333AA;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+#overlayButton:hover {
+    background-color: #5555CC;
+}
